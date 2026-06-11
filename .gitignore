@@ -1,0 +1,54 @@
+# 의존성
+node_modules
+.npm
+
+# 빌드 산출물
+dist
+dist-ssr
+*.local
+
+# Capacitor 안드로이드 빌드 산출물 (네이티브 폴더 자체는 커밋, 빌드 결과만 제외)
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+android/app/release
+android/app/debug
+*.apk
+*.aab
+
+# 에디터/OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.log
+
+# 캐릭터 이미지 에셋 (개인 소장 이미지 — 커밋 제외, 폴더 구조/README는 유지)
+src/assets/characters/**/*.png
+src/assets/characters/**/*.webp
+src/assets/characters/**/*.jpg
+src/assets/characters/**/*.jpeg
+src/assets/characters/**/*.svg
+
+# 배경 이미지 에셋 (개인 소장 이미지 — 커밋 제외)
+src/assets/backgrounds/**/*.png
+src/assets/backgrounds/**/*.webp
+src/assets/backgrounds/**/*.jpg
+src/assets/backgrounds/**/*.jpeg
+src/assets/backgrounds/**/*.svg
+
+# 앱 아이콘 이미지 (캐릭터 파생 — 커밋 제외. 어댑티브 XML은 유지)
+android/app/src/main/res/mipmap-*/ic_launcher.png
+android/app/src/main/res/mipmap-*/ic_launcher_foreground.png
+android/app/src/main/res/mipmap-*/ic_launcher_round.png
+android/app/src/main/res/mipmap-*/ic_launcher_background.png
+
+# 아이콘 소스 이미지 (@capacitor/assets 입력 — 캐릭터 파생)
+/assets/
+
+# 타입스크립트 증분 빌드 캐시
+*.tsbuildinfo
+
+# 문서 (개인 작업 문서 — 커밋 제외)
+docs/

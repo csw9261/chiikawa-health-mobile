@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 전역 기본값 - 모바일 웹뷰 기준 */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-cream text-cocoa font-rounded antialiased;
+    /* 노치/제스처바 세이프 영역 패딩 (Capacitor 풀스크린 대비) */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
+    /* 웹뷰에서 길게 눌렀을 때 텍스트 선택/콜아웃 방지 (앱처럼 보이게) */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    overscroll-behavior: none;
+  }
+}
+
+@layer components {
+  /* 말랑한 카드 - 화면 곳곳에서 재사용 */
+  .blob-card {
+    @apply bg-surface rounded-blob shadow-soft;
+  }
+}
